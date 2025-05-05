@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نرخ‌نامه طلا و ارز | TGJU Crawler</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://v1.fontapi.ir/css/Vazir" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-coins"></i> نرخ‌نامه طلا و ارز</h1>
+            <p>آخرین قیمت‌های بازار از TGJU</p>
+            <div class="last-update">
+                <span id="update-time">در حال دریافت داده...</span>
+                <button id="refresh-btn"><i class="fas fa-sync-alt"></i> به‌روزرسانی</button>
+            </div>
+        </header>
+
+        <main>
+            <div class="price-cards">
+                <!-- قیمت دلار -->
+                <div class="card dollar">
+                    <div class="card-header">
+                        <i class="fas fa-dollar-sign"></i>
+                        <h2>قیمت دلار</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="price" id="dollar-price">--</div>
+                        <div class="change" id="dollar-change">
+                            <span class="change-amount">--</span>
+                            <span class="change-percent">--</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- سکه تمام -->
+                <div class="card gold">
+                    <div class="card-header">
+                        <i class="fas fa-medal"></i>
+                        <h2>سکه تمام</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="price" id="coin-price">--</div>
+                        <div class="change" id="coin-change">
+                            <span class="change-amount">--</span>
+                            <span class="change-percent">--</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- نیم سکه -->
+                <div class="card gold">
+                    <div class="card-header">
+                        <i class="fas fa-medal"></i>
+                        <h2>نیم سکه</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="price" id="halfcoin-price">--</div>
+                        <div class="change" id="halfcoin-change">
+                            <span class="change-amount">--</span>
+                            <span class="change-percent">--</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ربع سکه -->
+                <div class="card gold">
+                    <div class="card-header">
+                        <i class="fas fa-medal"></i>
+                        <h2>ربع سکه</h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="price" id="quartercoin-price">--</div>
+                        <div class="change" id="quartercoin-change">
+                            <span class="change-amount">--</span>
+                            <span class="change-percent">--</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <canvas id="price-chart"></canvas>
+            </div>
+        </main>
+
+        <footer>
+            <p>تمامی داده‌ها از سایت <a href="https://www.tgju.org" target="_blank">TGJU</a> دریافت می‌شوند</p>
+            <p class="note">⚠️ این سایت فقط برای نمایش اطلاعات است و مسئولیتی در قبال معاملات ندارد</p>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
